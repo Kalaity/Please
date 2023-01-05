@@ -97,6 +97,12 @@ let removeById = function (personId, done) {
 };
 
 //Delete one document using model.findById and remove
+Person.findByIdAndRemove(personID, (err, person) => {
+    if (err) {
+        return;
+    }
+    console.log(person);
+});
 
 // Delete Many Documents with model.remove()  
 const removeManyPeople = (done) => {
